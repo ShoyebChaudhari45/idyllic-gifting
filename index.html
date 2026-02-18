@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idyllic Services – Premium Corporate Gifting Solutions</title>
+    <meta name="description"
+        content="Idyllic Services is your trusted corporate gifting partner. We offer customized gift hampers, branded merchandise, employee rewards, and curated gift solutions for every occasion.">
+    <meta name="keywords"
+        content="corporate gifting, branded gifts, employee gifts, promotional merchandise, custom hampers, festival gifts, Idyllic Services">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-text">IDYLLIC</div>
+        </div>
+    </div>
+
+    <!-- Cursor follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="navLogo">
+                <div class="logo-wrapper">
+                    <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#01929e;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" />
+                        <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
+                        <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="brand-text-wrapper">
+                    <span class="logo-text-top">IDYLLIC</span>
+                    <span class="logo-text-bottom">SERVICES</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#products" class="nav-link" data-section="products">Products</a></li>
+                <li><a href="#categories" class="nav-link" data-section="categories">Categories</a></li>
+                <li><a href="#occasions" class="nav-link" data-section="occasions">Occasions</a></li>
+                <li><a href="#why-us" class="nav-link" data-section="why-us">Why Us</a></li>
+                <li><a href="#testimonials" class="nav-link" data-section="testimonials">Clients</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta" id="navCta">Get a Quote</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <ul class="mobile-links">
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#products" class="mobile-link">Products</a></li>
+                <li><a href="#categories" class="mobile-link">Categories</a></li>
+                <li><a href="#occasions" class="mobile-link">Occasions</a></li>
+                <li><a href="#why-us" class="mobile-link">Why Us</a></li>
+                <li><a href="#testimonials" class="mobile-link">Clients</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="mailto:sales@idyllicservices.in">sales@idyllicservices.in</a>
+                <a href="tel:9923790784">+91 99237 90784</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient-orb orb-1"></div>
+            <div class="hero-gradient-orb orb-2"></div>
+            <div class="hero-gradient-orb orb-3"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-grid-bg"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-animate="fade-up">
+                <span class="badge-dot"></span>
+                Your Trusted Corporate Gifting Partner
+            </div>
+            <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                Thoughtful Gifts That<br>
+                Strengthen Every<br>
+                <span class="hero-title-accent">Relationship</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                From curated hampers to branded merchandise — we craft memorable gifting
+                experiences for employees, clients, and every special occasion.
+            </p>
+            <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                <a href="#contact" class="btn btn-primary" id="heroCtaPrimary">
+                    <span>Request a Quote</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#products" class="btn btn-secondary" id="heroCtaSecondary">
+                    <span>Explore Products</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+            <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="5000">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Gifts Delivered</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="200">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Corporate Clients</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="500">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Product Options</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="100">0</span><span class="hero-stat-plus">%</span>
+                    <span class="hero-stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-left" data-animate="fade-right">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span>About Idyllic</span>
+                    </div>
+                    <h2 class="about-title">Premium Gifts.<br><span class="text-accent">Lasting Impressions.</span></h2>
+                    <p class="about-description">
+                        In today's corporate world, a thoughtful gift does more than just impress — it builds
+                        trust, strengthens partnerships, and creates memorable connections. At Idyllic Services,
+                        we believe every gift should tell a story and leave a lasting impression.
+                    </p>
+                    <p class="about-description">
+                        Whether it's festive hampers for your team, branded merchandise for a product launch,
+                        or personalized gifts for client appreciation — we curate <strong>premium gifting
+                            experiences</strong> that align with your brand's identity and values.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div>
+                                <h4>Fully Customizable</h4>
+                                <p>Personalized branding, packaging & messaging on every gift</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4>Pan-India Delivery</h4>
+                                <p>Hassle-free bulk delivery to any location across India</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Only the finest products from trusted brands and artisans</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary about-cta">
+                        <span>Start Gifting</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="about-right" data-animate="fade-left">
+                    <div class="about-visual">
+                        <div class="about-card about-card-1">
+                            <div class="card-icon"><i class="fas fa-gift"></i></div>
+                            <div class="card-number">500+</div>
+                            <div class="card-label">Product Choices</div>
+                        </div>
+                        <div class="about-card about-card-2">
+                            <div class="card-icon"><i class="fas fa-heart"></i></div>
+                            <div class="card-number">100%</div>
+                            <div class="card-label">Custom Branding</div>
+                        </div>
+                        <div class="about-card about-card-3">
+                            <div class="card-icon"><i class="fas fa-shipping-fast"></i></div>
+                            <div class="card-number">PAN</div>
+                            <div class="card-label">India Delivery</div>
+                        </div>
+                        <div class="about-visual-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products / Solutions Section -->
+    <section class="solutions" id="products">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span>Our Products</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">Curated Gift Collections<br>For Every Need</h2>
+                <p class="section-subtitle">From executive desk essentials to gourmet hampers, we offer a
+                    diverse range of premium gifting solutions tailored to your brand and budget.</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card" data-animate="fade-up" data-delay="0">
+                    <div class="solution-number">01</div>
+                    <div class="solution-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="solution-title">Custom Gift Hampers</h3>
+                    <p class="solution-desc">Thoughtfully curated gift hampers combining gourmet treats,
+                        premium products, and custom branding. Perfect for festivals, celebrations, and
+                        corporate milestones. Available in semi-customized and fully bespoke options.</p>
+                    <a href="#contact" class="solution-link">
+                        Explore Hampers <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="100">
+                    <div class="solution-number">02</div>
+                    <div class="solution-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="solution-title">Branded Merchandise</h3>
+                    <p class="solution-desc">Elevate your brand with custom-printed apparel, drinkware,
+                        tech accessories, and stationery. From t-shirts and caps to premium pens and
+                        notebooks — all featuring your company's branding.</p>
+                    <a href="#contact" class="solution-link">
+                        View Merchandise <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="200">
+                    <div class="solution-number">03</div>
+                    <div class="solution-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="solution-title">Employee Rewards & Recognition</h3>
+                    <p class="solution-desc">Celebrate your team's achievements with premium reward gifts,
+                        onboarding kits, work anniversary packages, and employee appreciation bundles that
+                        boost morale and strengthen company culture.</p>
+                    <a href="#contact" class="solution-link">
+                        See Rewards <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="300">
+                    <div class="solution-number">04</div>
+                    <div class="solution-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="solution-title">Client & VIP Gifting</h3>
+                    <p class="solution-desc">Make a statement with luxury executive gifts, exclusive
+                        hampers, and high-end branded products designed to impress your most valued clients,
+                        partners, and stakeholders.</p>
+                    <a href="#contact" class="solution-link">
+                        Explore VIP Gifts <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promise / Why Choose Us Section -->
+    <section class="promise" id="why-us">
+        <div class="promise-bg">
+            <div class="promise-gradient"></div>
+        </div>
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-label center light">
+                    <span class="label-line"></span>
+                    <span>Why Choose Idyllic</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title light">Your One-Stop Solution<br>For Corporate Gifting</h2>
+                <p class="section-subtitle light">We combine creativity, quality, and reliability to deliver
+                    gifting experiences that your teams and clients will truly cherish.</p>
+            </div>
+            <div class="promise-grid">
+                <div class="promise-card" data-animate="fade-up" data-delay="0">
+                    <div class="promise-card-number">01</div>
+                    <div class="promise-card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Complete Customization</h3>
+                    <p>From product selection to packaging design, logo printing, and personalized messages —
+                        every aspect of your gift is tailored to your brand.</p>
+                </div>
+                <div class="promise-card" data-animate="fade-up" data-delay="100">
+                    <div class="promise-card-number">02</div>
+                    <div class="promise-card-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Bulk Order Expertise</h3>
+                    <p>Seamlessly handle orders from 50 to 50,000+ units with consistent quality, on-time
+                        delivery, and dedicated account management for every order.</p>
+                </div>
+                <div class="promise-card" data-animate="fade-up" data-delay="200">
+                    <div class="promise-card-number">03</div>
+                    <div class="promise-card-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Premium Quality Assurance</h3>
+                    <p>We source only from trusted brands and artisans. Every product undergoes rigorous
+                        quality checks before it reaches your recipients.</p>
+                </div>
+                <div class="promise-card" data-animate="fade-up" data-delay="300">
+                    <div class="promise-card-number">04</div>
+                    <div class="promise-card-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Pan-India Delivery</h3>
+                    <p>Whether your team is in one office or spread across India, we ensure timely delivery to
+                        every doorstep — including individual shipments for WFH teams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span>Testimonials</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">Trusted by Leading<br>Brands, <span class="text-accent">Nationwide</span></h2>
+                <p class="section-subtitle">Here's what our corporate clients say about their gifting experience
+                    with us.</p>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">Idyllic Services made our Diwali gifting seamless. They handled
+                            everything from product selection to branding and delivered 2,000+ hampers to different
+                            locations across India — all on time and within budget. The quality was outstanding,
+                            and our employees absolutely loved the gifts!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-building"></i></div>
+                            <div>
+                                <div class="author-name">IT Services Company</div>
+                                <div class="author-role">Diwali Hampers – 2,000+ Units</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">We needed branded onboarding kits for our new hires, and
+                            Idyllic delivered beautifully designed welcome boxes with custom t-shirts, stationery,
+                            and tech gadgets — all featuring our company logo. The attention to detail was
+                            impressive, and the kits set the perfect tone for day one.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-laptop-code"></i></div>
+                            <div>
+                                <div class="author-name">Fintech Startup</div>
+                                <div class="author-role">Onboarding Kits – 500+ Units</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">We were looking for premium client appreciation gifts, and
+                            Idyllic curated an exquisite collection of luxury hampers with gourmet treats and
+                            branded accessories. Our high-value clients were truly impressed. They've now become
+                            our go-to gifting partner for all client-facing occasions.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <div class="author-name">Manufacturing Group</div>
+                                <div class="author-role">Client VIP Hampers – Premium Range</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous testimonial"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn slider-next" id="sliderNext" aria-label="Next testimonial"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section (replaces Culture) -->
+    <section class="culture" id="categories">
+        <div class="section-container">
+            <div class="about-grid reverse">
+                <div class="about-right" data-animate="fade-right">
+                    <div class="culture-visual">
+                        <div class="culture-img-wrapper" id="cultureImg">
+                            <div class="culture-placeholder-img">
+                                <i class="fas fa-gifts"></i>
+                            </div>
+                        </div>
+                        <div class="culture-overlap-card" data-animate="fade-up" data-delay="300">
+                            <h3>500+ Products</h3>
+                            <p>From drinkware to electronics, stationery to gourmet treats — we've got it all.</p>
+                            <div class="team-avatars">
+                                <div class="avatar" title="Drinkware"><i class="fas fa-mug-hot"
+                                        style="font-size:0.65rem"></i></div>
+                                <div class="avatar" title="Electronics"><i class="fas fa-headphones"
+                                        style="font-size:0.65rem"></i></div>
+                                <div class="avatar" title="Gourmet"><i class="fas fa-cookie"
+                                        style="font-size:0.65rem"></i></div>
+                                <div class="avatar-more">+20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-left" data-animate="fade-left">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span>Gift Categories</span>
+                    </div>
+                    <h2 class="about-title">Something For<br><span class="text-accent">Everyone</span></h2>
+                    <p class="about-description">
+                        We offer a wide range of gift categories to suit every occasion, budget, and recipient.
+                        Whether you're looking for practical desk accessories or indulgent gourmet hampers,
+                        our curated collections ensure the perfect gift every time.
+                    </p>
+                    <div class="culture-stats">
+                        <div class="c-stat">
+                            <span class="c-number">20+</span>
+                            <span class="c-label">Categories</span>
+                        </div>
+                        <div class="c-stat">
+                            <span class="c-number">50+</span>
+                            <span class="c-label">Brands</span>
+                        </div>
+                        <div class="c-stat">
+                            <span class="c-number">100%</span>
+                            <span class="c-label">Customizable</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Browse Categories</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Marquee (replaces Industries / Tech Section) -->
+    <section class="industries" id="occasions">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span>Product Range & Occasions</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">Gifts For Every<br><span class="text-accent">Occasion</span></h2>
+            </div>
+            <div class="industries-marquee" data-animate="fade-up" data-delay="200">
+                <div class="marquee-track">
+                    <div class="marquee-item"><i class="fas fa-mug-hot"></i> Drinkware</div>
+                    <div class="marquee-item"><i class="fas fa-laptop"></i> Electronics</div>
+                    <div class="marquee-item"><i class="fas fa-suitcase-rolling"></i> Travel Essentials</div>
+                    <div class="marquee-item"><i class="fas fa-pen-fancy"></i> Stationery</div>
+                    <div class="marquee-item"><i class="fas fa-cookie-bite"></i> Gourmet Treats</div>
+                    <div class="marquee-item"><i class="fas fa-tshirt"></i> Apparel</div>
+                    <div class="marquee-item"><i class="fas fa-seedling"></i> Planters & Pots</div>
+                    <div class="marquee-item"><i class="fas fa-couch"></i> Home & Living</div>
+                    <div class="marquee-item"><i class="fas fa-glasses"></i> Lifestyle</div>
+                    <div class="marquee-item"><i class="fas fa-wine-bottle"></i> Premium Hampers</div>
+                    <div class="marquee-item"><i class="fas fa-box-open"></i> Desk Essentials</div>
+                    <div class="marquee-item"><i class="fas fa-clock"></i> Watches & Accessories</div>
+                    <!-- Duplicated for seamless marquee -->
+                    <div class="marquee-item"><i class="fas fa-mug-hot"></i> Drinkware</div>
+                    <div class="marquee-item"><i class="fas fa-laptop"></i> Electronics</div>
+                    <div class="marquee-item"><i class="fas fa-suitcase-rolling"></i> Travel Essentials</div>
+                    <div class="marquee-item"><i class="fas fa-pen-fancy"></i> Stationery</div>
+                    <div class="marquee-item"><i class="fas fa-cookie-bite"></i> Gourmet Treats</div>
+                    <div class="marquee-item"><i class="fas fa-tshirt"></i> Apparel</div>
+                    <div class="marquee-item"><i class="fas fa-seedling"></i> Planters & Pots</div>
+                    <div class="marquee-item"><i class="fas fa-couch"></i> Home & Living</div>
+                    <div class="marquee-item"><i class="fas fa-glasses"></i> Lifestyle</div>
+                    <div class="marquee-item"><i class="fas fa-wine-bottle"></i> Premium Hampers</div>
+                    <div class="marquee-item"><i class="fas fa-box-open"></i> Desk Essentials</div>
+                    <div class="marquee-item"><i class="fas fa-clock"></i> Watches & Accessories</div>
+                </div>
+            </div>
+            <div class="industries-marquee reverse" data-animate="fade-up" data-delay="300">
+                <div class="marquee-track reverse-track">
+                    <div class="marquee-item"><i class="fas fa-star"></i> Diwali Gifts</div>
+                    <div class="marquee-item"><i class="fas fa-birthday-cake"></i> Birthday Celebrations</div>
+                    <div class="marquee-item"><i class="fas fa-briefcase"></i> Employee Onboarding</div>
+                    <div class="marquee-item"><i class="fas fa-trophy"></i> Awards & Recognition</div>
+                    <div class="marquee-item"><i class="fas fa-heart"></i> Client Appreciation</div>
+                    <div class="marquee-item"><i class="fas fa-calendar-check"></i> Work Anniversary</div>
+                    <div class="marquee-item"><i class="fas fa-snowflake"></i> Christmas & New Year</div>
+                    <div class="marquee-item"><i class="fas fa-eid"></i> Eid & Festivals</div>
+                    <div class="marquee-item"><i class="fas fa-bullhorn"></i> Product Launches</div>
+                    <div class="marquee-item"><i class="fas fa-handshake"></i> Trade Shows</div>
+                    <div class="marquee-item"><i class="fas fa-home"></i> WFH Kits</div>
+                    <div class="marquee-item"><i class="fas fa-hands-helping"></i> Thank You Gifts</div>
+                    <!-- Duplicated for seamless marquee -->
+                    <div class="marquee-item"><i class="fas fa-star"></i> Diwali Gifts</div>
+                    <div class="marquee-item"><i class="fas fa-birthday-cake"></i> Birthday Celebrations</div>
+                    <div class="marquee-item"><i class="fas fa-briefcase"></i> Employee Onboarding</div>
+                    <div class="marquee-item"><i class="fas fa-trophy"></i> Awards & Recognition</div>
+                    <div class="marquee-item"><i class="fas fa-heart"></i> Client Appreciation</div>
+                    <div class="marquee-item"><i class="fas fa-calendar-check"></i> Work Anniversary</div>
+                    <div class="marquee-item"><i class="fas fa-snowflake"></i> Christmas & New Year</div>
+                    <div class="marquee-item"><i class="fas fa-eid"></i> Eid & Festivals</div>
+                    <div class="marquee-item"><i class="fas fa-bullhorn"></i> Product Launches</div>
+                    <div class="marquee-item"><i class="fas fa-handshake"></i> Trade Shows</div>
+                    <div class="marquee-item"><i class="fas fa-home"></i> WFH Kits</div>
+                    <div class="marquee-item"><i class="fas fa-hands-helping"></i> Thank You Gifts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Gifting Ideas Section -->
+    <section class="blog" id="blog">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span>Gifting Ideas</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">Inspiration For Your<br><span class="text-accent">Next Gift</span></h2>
+                <p class="section-subtitle">Explore trending gifting ideas, seasonal picks, and helpful tips
+                    for unforgettable corporate gifting.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" data-animate="fade-up" data-delay="0">
+                    <div class="blog-img">
+                        <div class="blog-tag">Festival Gifting</div>
+                        <i class="fas fa-gift blog-icon-bg"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Jan 15, 2026</div>
+                        <h3 class="blog-title">Top 10 Diwali Gift Hamper Ideas for Employees</h3>
+                        <p class="blog-excerpt">Discover the most thoughtful and budget-friendly Diwali hamper
+                            options that your employees will actually love...</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-animate="fade-up" data-delay="100">
+                    <div class="blog-img">
+                        <div class="blog-tag">Branding</div>
+                        <i class="fas fa-palette blog-icon-bg"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Dec 28, 2025</div>
+                        <h3 class="blog-title">How Branded Merchandise Boosts Your Company Image</h3>
+                        <p class="blog-excerpt">Learn how custom-branded gifts can turn employees and clients
+                            into brand ambassadors and strengthen market presence...</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-animate="fade-up" data-delay="200">
+                    <div class="blog-img">
+                        <div class="blog-tag">Employee Engagement</div>
+                        <i class="fas fa-users blog-icon-bg"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Nov 10, 2025</div>
+                        <h3 class="blog-title">The Ultimate Guide to Employee Onboarding Kits</h3>
+                        <p class="blog-excerpt">Create the perfect first-day experience with curated welcome
+                            kits that set the tone for a great workplace...</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-footer" data-animate="fade-up">
+                <a href="#" class="btn btn-outline">View All Ideas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="cta-bg">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <div class="section-container">
+            <div class="cta-content" data-animate="fade-up">
+                <h2 class="cta-title">Ready to Make Your<br>Next Gift <span class="text-accent">Unforgettable?</span>
+                </h2>
+                <p class="cta-subtitle">Whether it's 50 gifts or 50,000 — we'll handle the curation, branding,
+                    packaging, and delivery. Just tell us the occasion!</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <span>Get a Free Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="tel:9923790784" class="btn btn-outline btn-lg">
+                        <span><i class="fas fa-phone"></i> Call Us Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span>Get In Touch</span>
+                    </div>
+                    <h2 class="contact-title">Let's Craft Your<br><span class="text-accent">Perfect Gift</span></h2>
+                    <p class="contact-desc">Have an upcoming occasion or need to plan your corporate gifting
+                        calendar? Reach out and let us help you create memorable gifting experiences.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-item-label">Email Us</span>
+                                <a href="mailto:sales@idyllicservices.in"
+                                    class="contact-item-value">sales@idyllicservices.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <span class="contact-item-label">Call Us</span>
+                                <a href="tel:9923790784" class="contact-item-value">+91 99237 90784</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-item-label">Visit Us</span>
+                                <span class="contact-item-value">2nd Floor, Bajaj Bhavan, Railway Station<br>M.I.D.C
+                                    Aurangabad, MH - 431001</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/company/idyllic-technology-solutions" target="_blank"
+                            class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/IdyllicServices" target="_blank" class="social-link"
+                            aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Gift Category</label>
+                            <select id="service" name="service">
+                                <option value="">Select a Category</option>
+                                <option value="hampers">Custom Gift Hampers</option>
+                                <option value="merchandise">Branded Merchandise</option>
+                                <option value="rewards">Employee Rewards & Kits</option>
+                                <option value="vip">Client & VIP Gifting</option>
+                                <option value="festival">Festival Gifting</option>
+                                <option value="bulk">Bulk Promotional Gifts</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us about your gifting needs, quantity, budget, and timeline..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Inquiry</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="section-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">
+                            <div class="logo-wrapper small">
+                                <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#01929e;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="50" cy="50" r="45" fill="url(#logoGradientFooter)" />
+                                    <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
+                                    <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="brand-text-wrapper light">
+                                <span class="logo-text-top">IDYLLIC</span>
+                                <span class="logo-text-bottom">SERVICES</span>
+                            </div>
+                        </a>
+                        <p class="footer-desc">Idyllic Services is your premium corporate gifting partner,
+                            delivering curated gifts, branded merchandise, and custom hampers to businesses
+                            across India. Making every occasion special.</p>
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/company/idyllic-technology-solutions" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/IdyllicServices" target="_blank" aria-label="Twitter"><i
+                                    class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#why-us">Why Us</a></li>
+                            <li><a href="#testimonials">Clients</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Gift Categories</h4>
+                        <ul>
+                            <li><a href="#products">Custom Hampers</a></li>
+                            <li><a href="#products">Branded Merchandise</a></li>
+                            <li><a href="#products">Employee Rewards</a></li>
+                            <li><a href="#products">Client VIP Gifts</a></li>
+                            <li><a href="#products">Festival Gifting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Contact Us</h4>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-envelope"></i> <a
+                                    href="mailto:sales@idyllicservices.in">sales@idyllicservices.in</a></li>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:9923790784">+91 99237 90784</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i> 2nd Floor, Bajaj Bhavan, Railway Station M.I.D.C
+                                Aurangabad, MH - 431001</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-container">
+                <div class="footer-bottom-content">
+                    <p>Copyright 2025 © IDYLLIC SERVICES PVT LTD. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle chat">
+            <i class="fas fa-comment-dots"></i>
+            <span class="notification-dot"></span>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                        <span class="online-status"></span>
+                    </div>
+                    <div>
+                        <h4>Idyllic Assistant</h4>
+                        <p>Typically replies in minutes</p>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    Hello! Welcome to Idyllic Services. 👋 How can I help you find the perfect corporate gift today?
+                </div>
+            </div>
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
