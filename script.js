@@ -1,28 +1,32 @@
-// ===== IDYLLIC SERVICES - Premium Corporate Gifting Website JavaScript =====
+// ===== IDYLLIC SERVICES - Website JavaScript =====
 
 document.addEventListener('DOMContentLoaded', () => {
     // ===== PRELOADER =====
     const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                initAnimations();
+            }, 1200);
+        });
+
+        // Fallback: remove preloader after 3 seconds max
         setTimeout(() => {
             preloader.classList.add('hidden');
             document.body.style.overflow = 'auto';
             initAnimations();
-        }, 1200);
-    });
-
-    // Fallback: remove preloader after 3 seconds max
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        }, 3000);
+    } else {
         initAnimations();
-    }, 3000);
+    }
 
     // ===== CURSOR FOLLOWER =====
     const cursor = document.getElementById('cursorFollower');
     let cursorVisible = false;
 
-    if (window.matchMedia('(pointer: fine)').matches) {
+    if (cursor && window.matchMedia('(pointer: fine)').matches) {
         document.addEventListener('mousemove', (e) => {
             if (!cursorVisible) {
                 cursor.classList.add('active');
@@ -32,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor.style.top = e.clientY - 10 + 'px';
         });
 
-        // Hover effect on interactive elements
         const interactiveElements = document.querySelectorAll('a, button, .solution-card, .promise-card, .about-card, input, select, textarea');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
@@ -57,42 +60,44 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        // Add scrolled class
-        if (scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
 
         // Back to top button
         const backToTop = document.getElementById('backToTop');
-        if (scrollY > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        if (backToTop) {
+            if (scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         }
 
-        // Active nav link based on scroll position
         updateActiveNavLink();
-
         lastScroll = scrollY;
     });
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-    });
-
-    // Close mobile menu on link click
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto';
+    if (navToggle && mobileMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
-    });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
 
     // Update active nav link
     function updateActiveNavLink() {
@@ -123,18 +128,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (target) {
                 const offset = 80;
                 const top = target.offsetTop - offset;
-                window.scrollTo({
-                    top: top,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top, behavior: 'smooth' });
             }
         });
     });
 
     // ===== BACK TO TOP =====
-    document.getElementById('backToTop').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // ===== COUNTER ANIMATION =====
     function animateCounters() {
@@ -168,9 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function formatNumber(num) {
         if (num >= 100000) {
-            return (num / 1000).toFixed(0) + 'K+';
+            return (num / 100000).toFixed(0) + ',00,000';
         } else if (num >= 1000) {
-            return (num / 1000).toFixed(1) + 'K+';
+            return (num / 1000).toFixed(0) + 'K';
         }
         return num;
     }
@@ -187,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         entry.target.classList.add('animate-in');
                     }, parseInt(delay));
 
-                    // Trigger counter animation when hero stats are visible
                     if (entry.target.closest('.hero-stats') || entry.target.classList.contains('hero-stats')) {
                         animateCounters();
                     }
@@ -226,67 +230,70 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlides = 3;
     let slideInterval;
 
-    function goToSlide(index) {
-        currentSlide = index;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    if (track && prevBtn && nextBtn) {
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
 
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentSlide);
-        });
-    }
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % totalSlides);
+        }
 
-    function nextSlide() {
-        goToSlide((currentSlide + 1) % totalSlides);
-    }
+        function prevSlideAction() {
+            goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+        }
 
-    function prevSlide() {
-        goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
-    }
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetInterval();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetInterval();
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
+        prevBtn.addEventListener('click', () => {
+            prevSlideAction();
             resetInterval();
         });
-    });
 
-    function resetInterval() {
-        clearInterval(slideInterval);
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetInterval();
+            });
+        });
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 6000);
+        }
+
         slideInterval = setInterval(nextSlide, 6000);
-    }
 
-    slideInterval = setInterval(nextSlide, 6000);
+        // Touch support for slider
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const slider = document.getElementById('testimonialsSlider');
 
-    // Touch support for slider
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const slider = document.getElementById('testimonialsSlider');
+        if (slider) {
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
 
-    slider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
 
-    slider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) nextSlide();
-            else prevSlide();
-            resetInterval();
+            function handleSwipe() {
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) nextSlide();
+                    else prevSlideAction();
+                    resetInterval();
+                }
+            }
         }
     }
 
@@ -314,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
             container.appendChild(particle);
         }
 
-        // Create particle animation keyframes
         const style = document.createElement('style');
         style.textContent = `
             @keyframes particleFloat {
@@ -336,18 +342,16 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             const submitBtn = document.getElementById('submitBtn');
+            if (!submitBtn) return;
             const originalContent = submitBtn.innerHTML;
 
-            // Show loading state
             submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
             submitBtn.disabled = true;
 
-            // Simulate form submission
             setTimeout(() => {
                 submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
                 submitBtn.style.background = 'linear-gradient(135deg, #00d4aa 0%, #0d7377 100%)';
 
-                // Reset form
                 setTimeout(() => {
                     contactForm.reset();
                     submitBtn.innerHTML = originalContent;
@@ -380,7 +384,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const centerY = rect.height / 2;
                 const rotateX = (y - centerY) / 20;
                 const rotateY = (centerX - x) / 20;
-
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
             });
 
@@ -413,7 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
             heroTitle.style.opacity = '1';
         }
     }
-
     setTimeout(typeWriter, 1500);
 
     // ===== NAVBAR LINK HOVER SLIDE EFFECT =====
@@ -431,9 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lazyLoadSections.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
         lazyLoadSections.observe(section);
@@ -444,12 +444,209 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            // Recalculate any dimension-dependent elements
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 768 && navToggle && mobileMenu) {
                 navToggle.classList.remove('active');
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
         }, 250);
     });
+
+    // ===== CHATBOT =====
+    const chatToggle = document.getElementById('chatbotToggle');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatQuickQuestions = document.getElementById('chatQuickQuestions');
+
+    // Predefined Q&A
+    const chatQA = [
+        {
+            keywords: ['service', 'services', 'offer', 'what do you do', 'solutions', 'help'],
+            answer: "We offer a range of staffing solutions:\n\n🔹 **Permanent Staffing** – Full-time hires with 80% accuracy\n🔹 **Temporary Staffing** – On-demand talent for projects\n🔹 **Leadership & C-Suite Hiring** – CXO-level recruitment\n🔹 **RPO** – End-to-end recruitment outsourcing\n\nVisit our Solutions page for details!"
+        },
+        {
+            keywords: ['price', 'pricing', 'cost', 'how much', 'rate', 'fee', 'charges'],
+            answer: "Our pricing varies based on the type and volume of hiring. We offer competitive rates tailored to your specific needs. For a custom quote, please contact us at sales@idyllicservices.in or call +91 9923790784."
+        },
+        {
+            keywords: ['contact', 'reach', 'email', 'phone', 'call', 'address', 'location', 'office'],
+            answer: "You can reach us through:\n\n📧 Email: sales@idyllicservices.in\n📞 Phone: +91 9923790784\n📍 Address: 2nd Floor, Bajaj Bhavan, Railway Station M.I.D.C, Aurangabad, MH - 431001\n\nOr fill out the form on our Contact page!"
+        },
+        {
+            keywords: ['time', 'hours', 'when', 'open', 'available', 'working'],
+            answer: "Our business hours are Monday to Friday, 9:00 AM – 6:00 PM IST. You can reach out anytime via email, and we'll get back to you within 24 hours!"
+        },
+        {
+            keywords: ['process', 'how', 'steps', 'hiring process', 'workflow', 'start'],
+            answer: "Our hiring process is simple:\n\n1️⃣ **Share your requirements** — Send us your JD or hiring needs\n2️⃣ **We source candidates** — Our AI-powered platform finds the best matches within 24 hours\n3️⃣ **Screening & interviews** — Multi-level talent screening with 80% accuracy\n4️⃣ **Onboarding** — We assist with the complete onboarding process\n\nReady to start? Contact us today!"
+        },
+        {
+            keywords: ['permanent', 'full time', 'full-time', 'hire permanently'],
+            answer: "Our Permanent Staffing solution helps you build your dream team with fully screened candidates across every industry. We guarantee an 80% profile-to-role match, substantially reducing your time-to-hire. Contact us to get started!"
+        },
+        {
+            keywords: ['temporary', 'contract', 'short term', 'short-term', 'freelance'],
+            answer: "Our Temporary Staffing solution lets you hire professionals for time-based or short-term projects. Scale your teams up and down according to your immediate business needs with on-demand talent. Reach out to learn more!"
+        },
+        {
+            keywords: ['leadership', 'c-suite', 'executive', 'cto', 'ceo', 'cxo', 'director'],
+            answer: "We specialize in identifying and attracting visionary leaders aligned with your strategic goals. With access to CXO-level talent from the fastest-growing companies, we secure executive talent that drives success. Let's discuss your leadership needs!"
+        },
+        {
+            keywords: ['rpo', 'outsource', 'outsourcing', 'recruitment process'],
+            answer: "Our RPO solution covers your entire recruitment process — from sourcing and screening to interviewing, hiring, and onboarding. The result: reduced costs, faster time-to-fill, and substantially improved candidate quality!"
+        },
+        {
+            keywords: ['industry', 'industries', 'sectors', 'domain', 'work with'],
+            answer: "We serve clients across a wide range of industries including:\n\n💻 Software & IT\n🏦 Fintech\n🏥 Healthcare\n🛒 E-Retail\n🏭 Manufacturing\n🤖 Robotics\n☁️ Cloud & DevOps\n🧠 AI & ML\n\nAnd many more! Whatever your industry, we've got the talent."
+        },
+        {
+            keywords: ['ai', 'technology', 'tech', 'platform', 'tool'],
+            answer: "We integrate AI-powered tools with over a decade of recruitment experience. Our multi-level talent screening guarantees an 80% profile-to-role match, helping you find the right fit faster than traditional methods."
+        },
+        {
+            keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening'],
+            answer: "Hello! 👋 Welcome to Idyllic Services. I'm here to help you with any questions about our staffing and recruitment solutions. What would you like to know?"
+        },
+        {
+            keywords: ['thank', 'thanks', 'bye', 'goodbye'],
+            answer: "You're welcome! 😊 If you have any more questions, feel free to ask anytime. Have a great day!"
+        }
+    ];
+
+    const quickQuestions = [
+        "What services do you offer?",
+        "How to contact you?",
+        "What's the hiring process?",
+        "Pricing info",
+        "Which industries?"
+    ];
+
+    if (chatToggle && chatWindow && chatMessages && chatForm && chatInput) {
+        // Toggle chat window
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('active');
+            const notifDot = chatToggle.querySelector('.notification-dot');
+            if (notifDot) notifDot.style.display = 'none';
+
+            // Send welcome message on first open
+            if (chatMessages.children.length === 0) {
+                addBotMessage("Hi there! 👋 I'm the Idyllic Assistant. How can I help you today? You can ask about our services, pricing, contact details, or anything else!");
+                renderQuickQuestions();
+            }
+        });
+
+        // Close chat
+        if (chatClose) {
+            chatClose.addEventListener('click', () => {
+                chatWindow.classList.remove('active');
+            });
+        }
+
+        // Handle form submit
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            addUserMessage(message);
+            chatInput.value = '';
+
+            // Show typing indicator
+            showTyping();
+
+            setTimeout(() => {
+                removeTyping();
+                const response = findAnswer(message);
+                addBotMessage(response);
+            }, 800 + Math.random() * 600);
+        });
+
+        // Render quick question buttons
+        function renderQuickQuestions() {
+            if (!chatQuickQuestions) return;
+            chatQuickQuestions.innerHTML = '';
+            quickQuestions.forEach(q => {
+                const btn = document.createElement('button');
+                btn.className = 'quick-question-btn';
+                btn.textContent = q;
+                btn.addEventListener('click', () => {
+                    addUserMessage(q);
+                    showTyping();
+                    setTimeout(() => {
+                        removeTyping();
+                        const response = findAnswer(q);
+                        addBotMessage(response);
+                    }, 800 + Math.random() * 600);
+                });
+                chatQuickQuestions.appendChild(btn);
+            });
+        }
+
+        // Add bot message
+        function addBotMessage(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'chat-message bot';
+            // Convert markdown-style bold and newlines
+            const formattedText = text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+            msgDiv.innerHTML = `
+                <div class="chat-message-avatar"><i class="fas fa-robot"></i></div>
+                <div class="chat-bubble">${formattedText}</div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Add user message
+        function addUserMessage(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'chat-message user';
+            msgDiv.innerHTML = `
+                <div class="chat-message-avatar"><i class="fas fa-user"></i></div>
+                <div class="chat-bubble">${text}</div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Show typing indicator
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'chat-message bot';
+            typingDiv.id = 'chatTyping';
+            typingDiv.innerHTML = `
+                <div class="chat-message-avatar"><i class="fas fa-robot"></i></div>
+                <div class="chat-bubble"><div class="chat-typing"><span></span><span></span><span></span></div></div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Remove typing indicator
+        function removeTyping() {
+            const typing = document.getElementById('chatTyping');
+            if (typing) typing.remove();
+        }
+
+        // Find answer based on keywords
+        function findAnswer(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+
+            for (const qa of chatQA) {
+                for (const keyword of qa.keywords) {
+                    if (lowerMessage.includes(keyword)) {
+                        return qa.answer;
+                    }
+                }
+            }
+
+            // Default fallback
+            return "Thanks for your question! I might not have the exact answer right now, but our team would love to help. You can:\n\n📧 Email: sales@idyllicservices.in\n📞 Call: +91 9923790784\n\nOr visit our Contact page to send us a message!";
+        }
+    }
 });
