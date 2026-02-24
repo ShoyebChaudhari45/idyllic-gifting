@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 preloader.classList.add('hidden');
                 document.body.style.overflow = 'auto';
                 initAnimations();
-            }, 1200);
+            }, 300);
         });
 
-        // Fallback: remove preloader after 3 seconds max
+        // Fallback: remove preloader after 1.2 seconds max
         setTimeout(() => {
             preloader.classList.add('hidden');
             document.body.style.overflow = 'auto';
             initAnimations();
-        }, 3000);
+        }, 1200);
     } else {
         initAnimations();
     }

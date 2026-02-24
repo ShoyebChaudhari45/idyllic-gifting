@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – Idyllic Services | Recruitment & Staffing Experts</title>
+    <title>About Us – Idyllic Services® | Recruitment & Staffing Experts</title>
     <meta name="description"
         content="Learn about Idyllic Services – a tech-driven recruitment partner connecting global companies with top IT and leadership talent across India.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -21,28 +22,12 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <div class="logo-wrapper">
-                    <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#01929e;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" />
-                        <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
-                        <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="brand-text-wrapper">
-                    <span class="logo-text-top">IDYLLIC</span>
-                    <span class="logo-text-bottom">SERVICES</span>
-                </div>
+                <img src="logo.webp" alt="Idyllic Services®" class="nav-logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="products.html" class="nav-link">Solutions</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle">
@@ -57,7 +42,7 @@
             <ul class="mobile-links">
                 <li><a href="index.html" class="mobile-link">Home</a></li>
                 <li><a href="about.html" class="mobile-link">About</a></li>
-                <li><a href="products.html" class="mobile-link">Solutions</a></li>
+                <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
                 <li><a href="contact.html" class="mobile-link">Contact</a></li>
             </ul>
         </div>
@@ -86,7 +71,8 @@
                         <strong>35–80 days</strong>, hiring skilled talent is often one of the most common bottlenecks
                         in a company's expansion and diversification strategy. In many cases, the cost of a bad hire can
                         go up to as much as <strong>30% of the role's annual salary</strong>, making it imperative that
-                        companies hire the right people.</p>
+                        companies hire the right people.
+                    </p>
                     <p class="about-description"><strong>That's where we come in.</strong> Our curated offerings empower
                         fast-paced startups, Fortune 500 companies, and mid-level tech firms across the globe to find
                         and recruit the best talent that the market has to offer.</p>
@@ -189,23 +175,9 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <div class="logo-wrapper small">
-                            <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="fLG" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#01929e" />
-                                        <stop offset="100%" style="stop-color:#f15a24" />
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="45" fill="url(#fLG)" />
-                                <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
-                                <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="brand-text-wrapper">
-                            <span class="logo-text-top" style="font-size:1.2rem;">IDYLLIC</span>
-                            <span class="logo-text-bottom" style="font-size:0.6rem;">SERVICES</span>
-                        </div>
+                        <a href="index.html">
+                            <img src="logo.webp" alt="Idyllic Services®" class="footer-logo-img">
+                        </a>
                     </div>
                     <p class="footer-desc">Idyllic is a tech-driven recruitment partner connecting global companies with
                         top IT and leadership talent across India.</p>
@@ -221,17 +193,17 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Solutions</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-group">
                     <h4>Our Solutions</h4>
                     <ul>
-                        <li><a href="products.html">Permanent Staffing</a></li>
-                        <li><a href="products.html">Temporary Staffing</a></li>
-                        <li><a href="products.html">Leadership Hiring</a></li>
-                        <li><a href="products.html">RPO</a></li>
+                        <li><a href="solutions.html">Permanent Staffing</a></li>
+                        <li><a href="solutions.html">Temporary Staffing</a></li>
+                        <li><a href="solutions.html">Leadership Hiring</a></li>
+                        <li><a href="solutions.html">RPO</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-group">
@@ -248,7 +220,7 @@
         </div>
         <div class="footer-bottom section-container">
             <div class="footer-bottom-content">
-                <p>Copyright 2025 © IDYLLIC SERVICES PVT LTD</p>
+                <p>Copyright 2026 © IDYLLIC SERVICES PVT LTD</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -257,7 +229,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

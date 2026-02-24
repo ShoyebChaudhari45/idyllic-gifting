@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+  <defs>
+    <linearGradient id="lgCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007c8a;stop-opacity:1"/>
+      <stop offset="30%" style="stop-color:#01929e;stop-opacity:1"/>
+      <stop offset="55%" style="stop-color:#d46520;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Logo Circle -->
+  <circle cx="55" cy="55" r="50" fill="url(#lgCircle)"/>
+  <!-- Stylized "i" body — wide calligraphic swoosh like a person reaching up -->
+  <path d="
+    M34 94
+    C28 86, 26 70, 30 55
+    C34 40, 42 28, 52 18
+    C56 14, 58 12, 60 12
+    L64 16
+    C58 22, 52 30, 48 40
+    C42 56, 40 72, 46 84
+    C48 90, 52 93, 56 94
+    Z
+  " fill="white"/>
+  <!-- Slight highlight on the upper curve to create the person-reaching effect -->
+  <path d="
+    M55 18
+    C52 22, 47 30, 44 38
+    L40 35
+    C44 26, 50 18, 56 12
+    C58 10, 60 10, 61 11
+    Z
+  " fill="white" opacity="0.85"/>
+  <!-- Orange dot of the "i" -->
+  <circle cx="73" cy="18" r="7.5" fill="#f15a24" stroke="white" stroke-width="2.5"/>
+  <!-- IDYLLIC Text -->
+  <text x="125" y="65" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-size="52" font-weight="800" fill="#0d3b5e" letter-spacing="3">IDYLLIC</text>
+  <!-- ® Symbol -->
+  <text x="453" y="30" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#0d3b5e">®</text>
+  <!-- Services Text with wide letter spacing -->
+  <text x="128" y="96" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-size="25" font-weight="600" fill="#0d3b5e" letter-spacing="9">S<tspan letter-spacing="8.5">ERVICES</tspan></text>
+</svg>

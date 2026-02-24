@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idyllic Services – Premium Staffing & Recruitment Solutions</title>
+    <title>Idyllic Services® — Premium Staffing & Recruitment Solutions</title>
     <meta name="description"
-        content="Idyllic Services is your trusted recruitment partner. We offer permanent staffing, temporary staffing, leadership hiring, and RPO solutions across India.">
+        content="Idyllic Services is India's trusted recruitment partner offering permanent staffing, temporary staffing, leadership hiring, and RPO solutions.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -21,7 +22,9 @@
     <div id="preloader">
         <div class="loader-container">
             <div class="loader-ring"></div>
-            <div class="loader-text">IDYLLIC</div>
+            <div class="loader-logo-wrapper">
+                <img src="logo.webp" alt="Idyllic Services" class="loader-logo-img">
+            </div>
         </div>
     </div>
 
@@ -32,28 +35,12 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <div class="logo-wrapper">
-                    <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#01929e;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" />
-                        <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
-                        <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="brand-text-wrapper">
-                    <span class="logo-text-top">IDYLLIC</span>
-                    <span class="logo-text-bottom">SERVICES</span>
-                </div>
+                <img src="logo.webp" alt="Idyllic Services®" class="nav-logo-img">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="products.html" class="nav-link">Solutions</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle">
@@ -70,7 +57,7 @@
             <ul class="mobile-links">
                 <li><a href="index.html" class="mobile-link">Home</a></li>
                 <li><a href="about.html" class="mobile-link">About</a></li>
-                <li><a href="products.html" class="mobile-link">Solutions</a></li>
+                <li><a href="solutions.html" class="mobile-link">Solutions</a></li>
                 <li><a href="contact.html" class="mobile-link">Contact</a></li>
             </ul>
             <div class="mobile-contact">
@@ -92,20 +79,31 @@
         <div class="hero-content">
             <div class="hero-badge" data-animate="fade-up">
                 <span class="badge-dot"></span>
-                Premium Staffing Solutions
+                India's Trusted Recruitment Partner
             </div>
             <h1 class="hero-title" data-animate="fade-up" data-delay="100">
-                Outstanding Companies<br>Are Forged By<br>
-                <span class="hero-title-accent">Extraordinary Teams</span>
+                Take the First Step in Your<br>
+                <span class="text-teal">Growth</span> <span class="text-orange">Journey</span>
             </h1>
             <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
-                We help you identify the ideal talent to meet your unique business needs. From permanent staffing to
-                leadership hiring — delivered with precision.
+                Connect with our recruitment experts today and discover how we can help you build your dream team —
+                faster, smarter, and more cost-effectively.
             </p>
             <div class="hero-buttons" data-animate="fade-up" data-delay="300">
-                <a href="products.html" class="btn btn-primary"><span>Our Solutions</span><i
-                        class="fas fa-arrow-right"></i></a>
-                <a href="contact.html" class="btn btn-secondary">Schedule Consultation</a>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <span>Schedule a Consultation</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="solutions.html" class="btn btn-secondary btn-lg">
+                    <span>View Solutions</span>
+                </a>
+            </div>
+            <div class="hero-trust-strip" data-animate="fade-up" data-delay="350">
+                <div class="trust-item"><i class="fas fa-shield-halved"></i><span>ISO Compliant</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><i class="fas fa-award"></i><span>10+ Years of Excellence</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><i class="fas fa-earth-asia"></i><span>Pan-India Presence</span></div>
             </div>
             <div class="hero-stats" data-animate="fade-up" data-delay="400">
                 <div class="hero-stat">
@@ -132,50 +130,49 @@
     </section>
 
     <!-- Solutions Section -->
-    <section class="solutions section-container" id="solutions">
-        <div class="section-header" data-animate="fade-up">
-            <span class="section-label center"><span class="label-line"></span> WHAT WE OFFER <span
-                    class="label-line"></span></span>
-            <h2 class="section-title">Explore Our <span class="text-accent">Solutions</span></h2>
-            <p class="section-subtitle">Our range of offerings has been designed to cater to the different needs of our
-                clients, from permanent and temporary staffing, to bulk hiring and payroll management.</p>
-        </div>
-        <div class="solutions-grid">
-            <div class="solution-card" data-animate="fade-up">
-                <span class="solution-number">01</span>
-                <div class="solution-icon"><i class="fas fa-user-tie"></i></div>
-                <h3 class="solution-title">Permanent Staffing</h3>
-                <p class="solution-desc">Build your dream team with access to fully screened and qualified candidates
-                    across every industry. Our team of expert recruiters guarantees an 80% rate of accuracy,
-                    substantially reducing your time-to-hire.</p>
-                <a href="products.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+    <section class="solutions" id="solutions">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-label center"><span class="label-line"></span> WHAT WE OFFER <span
+                        class="label-line"></span></span>
+                <h2 class="section-title">Explore Our <span class="text-accent">Solutions</span></h2>
+                <p class="section-subtitle">From permanent and temporary staffing to leadership hiring and RPO — we
+                    deliver end-to-end recruitment solutions tailored to your needs.</p>
             </div>
-            <div class="solution-card" data-animate="fade-up" data-delay="100">
-                <span class="solution-number">02</span>
-                <div class="solution-icon"><i class="fas fa-clock"></i></div>
-                <h3 class="solution-title">Temporary Staffing</h3>
-                <p class="solution-desc">Hire professionals for time-based or short-term projects, and scale your teams
-                    up and down according to your immediate business needs. Build limitless capabilities with on-demand
-                    talent.</p>
-                <a href="products.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="solution-card" data-animate="fade-up" data-delay="200">
-                <span class="solution-number">03</span>
-                <div class="solution-icon"><i class="fas fa-crown"></i></div>
-                <h3 class="solution-title">Leadership & C-Suite Hiring</h3>
-                <p class="solution-desc">We excel at identifying and attracting visionary leaders who align with your
-                    strategic goals. With access to CXO-level talent from the fastest-growing companies across all
-                    industries.</p>
-                <a href="products.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="solution-card" data-animate="fade-up" data-delay="300">
-                <span class="solution-number">04</span>
-                <div class="solution-icon"><i class="fas fa-gears"></i></div>
-                <h3 class="solution-title">Recruitment Process Outsourcing</h3>
-                <p class="solution-desc">From talent sourcing and screening, to interviewing, hiring and onboarding – we
-                    undertake your complete recruitment process. Reduced hiring costs and substantially improved
-                    candidate quality.</p>
-                <a href="products.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <div class="solutions-grid">
+                <div class="solution-card" data-animate="fade-up">
+                    <span class="solution-number">01</span>
+                    <div class="solution-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="solution-title">Permanent Staffing</h3>
+                    <p class="solution-desc">Build your dream team with fully screened and qualified candidates across
+                        every industry. Our expert recruiters deliver an 80% match accuracy, substantially reducing your
+                        time-to-hire.</p>
+                    <a href="solutions.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="100">
+                    <span class="solution-number">02</span>
+                    <div class="solution-icon"><i class="fas fa-clock"></i></div>
+                    <h3 class="solution-title">Temporary Staffing</h3>
+                    <p class="solution-desc">Scale your teams up and down for project-based or short-term requirements.
+                        Build limitless capabilities with on-demand talent — without the long-term commitments.</p>
+                    <a href="solutions.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="200">
+                    <span class="solution-number">03</span>
+                    <div class="solution-icon"><i class="fas fa-crown"></i></div>
+                    <h3 class="solution-title">Leadership & C-Suite Hiring</h3>
+                    <p class="solution-desc">We identify visionary leaders aligned with your strategic goals. Access
+                        CXO-level talent from the fastest-growing companies across all industries.</p>
+                    <a href="solutions.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card" data-animate="fade-up" data-delay="300">
+                    <span class="solution-number">04</span>
+                    <div class="solution-icon"><i class="fas fa-gears"></i></div>
+                    <h3 class="solution-title">Recruitment Process Outsourcing</h3>
+                    <p class="solution-desc">From talent sourcing and screening to onboarding — we handle your entire
+                        recruitment lifecycle. Reduced costs, improved quality, faster results.</p>
+                    <a href="solutions.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -188,7 +185,7 @@
                         class="label-line"></span></span>
                 <h2 class="section-title">Curated Staffing for a <span class="text-accent">Global Workforce</span></h2>
                 <p class="section-subtitle">We integrate AI-powered tools with over a decade of recruitment experience
-                    to connect the right talent with opportunities more swiftly than any competitor.</p>
+                    to connect the right talent with opportunities — faster than anyone else.</p>
             </div>
             <div class="promise-grid">
                 <div class="promise-card" data-animate="fade-up">
@@ -209,59 +206,57 @@
                     <span class="promise-card-number">03</span>
                     <div class="promise-card-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Shorter Time-to-Hire</h3>
-                    <p>Our team starts sourcing within 24 hrs of receiving your requirement, enabling us to
+                    <p>Our team starts sourcing within 24 hours of receiving your requirement, enabling us to
                         substantially reduce your hiring timelines.</p>
                 </div>
                 <div class="promise-card" data-animate="fade-up" data-delay="300">
                     <span class="promise-card-number">04</span>
                     <div class="promise-card-icon"><i class="fas fa-shield-halved"></i></div>
                     <h3>100% Compliance</h3>
-                    <p>From taxation and salary disbursement, to statutory benefits and payroll – we ensure 100%
-                        compliance with all local employment laws.</p>
+                    <p>From taxation and payroll to statutory benefits — we ensure complete compliance with all local
+                        employment laws.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About / 100% Results Section -->
+    <!-- About / Why Choose Us -->
     <section class="about" id="about">
         <div class="section-container">
             <div class="about-grid">
                 <div class="about-left" data-animate="fade-right">
                     <span class="section-label"><span class="label-line"></span> WHY CHOOSE US</span>
                     <h2 class="about-title">100% Results.<br><span class="text-accent">Zero Fluff.</span></h2>
-                    <p class="about-description">When it comes to building your A-team within tight timelines,
-                        traditional recruitment fails to meet the needs of ever-evolving modern-day businesses. With the
-                        average time-to-hire a software developer ranging between 35–80 days, hiring skilled talent is
-                        often one of the most common bottlenecks in a company's expansion strategy.</p>
+                    <p class="about-description">Traditional recruitment fails to keep pace with modern business
+                        demands. With the average time-to-hire for a developer ranging 35–80 days, hiring skilled talent
+                        becomes a critical bottleneck in your growth strategy.</p>
                     <p class="about-description"><strong>That's where we come in.</strong> Sourcing candidates for 100+
-                        technical and non-technical roles across our talent community of 500,000 highly trained
-                        professionals, we deliver the right fit for every role – every time.</p>
+                        roles across our 500,000-strong talent community, we deliver the right fit — every time.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <div>
                                 <h4>Fast-Paced Startups</h4>
-                                <p>Scale your team rapidly with vetted talent ready to contribute from day one.</p>
+                                <p>Scale your team rapidly with vetted talent ready from day one.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <div>
                                 <h4>Fortune 500 Companies</h4>
-                                <p>Enterprise-grade recruitment solutions for complex organizational needs.</p>
+                                <p>Enterprise-grade recruitment for complex organisational needs.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <div>
                                 <h4>Mid-Level Tech Firms</h4>
-                                <p>Find specialized talent to drive your technology initiatives forward.</p>
+                                <p>Specialised talent to drive your technology initiatives forward.</p>
                             </div>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary about-cta"><span>Schedule a Consultation</span><i
-                            class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-primary about-cta"><span>Schedule a
+                            Consultation</span><i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="about-right" data-animate="fade-left">
                     <div class="about-visual">
@@ -293,18 +288,18 @@
             <div class="section-header" data-animate="fade-up">
                 <span class="section-label center"><span class="label-line"></span> TESTIMONIALS <span
                         class="label-line"></span></span>
-                <h2 class="section-title">Curating the Finest <span class="text-accent">Talent, Globally</span></h2>
+                <h2 class="section-title">Trusted by <span class="text-accent">Industry Leaders</span></h2>
                 <p class="section-subtitle">Leaders across every industry trust us to build their dream teams.</p>
             </div>
             <div class="testimonials-slider" id="testimonialsSlider" data-animate="fade-up" data-delay="200">
                 <div class="testimonial-track" id="testimonialTrack">
                     <div class="testimonial-card">
                         <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">Idyllic Services Pvt. Ltd. has been a key partner in addressing our
-                            diverse recruitment needs. As a manufacturing company, we faced challenges in sourcing IT
-                            resources, but Idyllic had the knack for finding the right candidates for even the most
-                            niche positions. Their responsiveness, professionalism, and personalized approach make the
-                            recruitment process smooth and efficient.</p>
+                        <p class="testimonial-text">Idyllic Services has been a key partner in addressing our diverse
+                            recruitment needs. As a manufacturing company, we faced challenges in sourcing IT resources,
+                            but Idyllic had the knack for finding the right candidates for even the most niche
+                            positions. Their responsiveness and professionalism make the recruitment process smooth and
+                            efficient.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fas fa-building"></i></div>
                             <div>
@@ -320,15 +315,15 @@
                     <div class="testimonial-card">
                         <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                         <p class="testimonial-text">We have had an excellent experience working with Idyllic Services.
-                            As a robotics company, finding specialized talent within the local region was a significant
+                            As a robotics company, finding specialised talent within the local region was a significant
                             challenge, but their team went above and beyond to source top-tier candidates that met our
-                            exact needs. Their attention to detail and commitment to delivering quality results
-                            distinguish them from other agencies.</p>
+                            exact needs. Their attention to detail and commitment to quality distinguish them from other
+                            agencies.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fas fa-robot"></i></div>
                             <div>
                                 <div class="author-name">Robotics Company</div>
-                                <div class="author-role">Specialized Talent Sourcing</div>
+                                <div class="author-role">Specialised Talent Sourcing</div>
                             </div>
                         </div>
                         <div class="testimonial-stars">
@@ -341,8 +336,7 @@
                         <p class="testimonial-text">Idyllic Services has been invaluable in helping us find the right
                             talent in a competitive market. Their team takes the time to understand our company's vision
                             and values, which reflects in the high-quality candidates they provide. Their ability to
-                            understand niche requirements and provide the perfect candidates distinguishes them from
-                            others.</p>
+                            understand niche requirements distinguishes them from others.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar"><i class="fas fa-laptop-code"></i></div>
                             <div>
@@ -377,14 +371,15 @@
         </div>
         <div class="section-container">
             <div class="cta-content" data-animate="fade-up">
-                <h2 class="cta-title">Take the First Step in Your<br><span class="text-accent">Growth Journey</span>
-                </h2>
+                <h2 class="cta-title">Ready to Build Your <span class="text-accent">Dream Team?</span></h2>
                 <p class="cta-subtitle">Connect with our recruitment experts today and discover how we can help you
-                    build your dream team — faster, smarter, and more cost-effectively.</p>
+                    hire faster, smarter, and more cost-effectively.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-lg"><span>Schedule a Consultation</span><i
-                            class="fas fa-arrow-right"></i></a>
-                    <a href="products.html" class="btn btn-secondary btn-lg">View Solutions</a>
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span>Schedule a Consultation</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="solutions.html" class="btn btn-secondary btn-lg">View Solutions</a>
                 </div>
             </div>
         </div>
@@ -425,26 +420,12 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <div class="logo-wrapper small">
-                            <svg viewBox="0 0 100 100" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#01929e;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#f15a24;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="45" fill="url(#footerLogoGrad)" />
-                                <path d="M42 75 C35 70, 45 40, 65 25 L68 28 C50 40, 48 70, 55 78 Z" fill="white" />
-                                <circle cx="72" cy="22" r="6" fill="#f15a24" stroke="white" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="brand-text-wrapper">
-                            <span class="logo-text-top" style="font-size:1.2rem;">IDYLLIC</span>
-                            <span class="logo-text-bottom" style="font-size:0.6rem;">SERVICES</span>
-                        </div>
+                        <a href="index.html">
+                            <img src="logo.webp" alt="Idyllic Services®" class="footer-logo-img">
+                        </a>
                     </div>
-                    <p class="footer-desc">Idyllic is a tech-driven recruitment partner connecting global companies with
-                        top IT and leadership talent across India, delivering faster hiring, lower costs and agile
+                    <p class="footer-desc">Idyllic is a tech-driven recruitment partner connecting global companies
+                        with top IT and leadership talent across India — delivering faster hiring, lower costs and agile
                         team-building solutions.</p>
                     <div class="footer-socials">
                         <a href="https://www.linkedin.com/company/idyllic-technology-solutions" target="_blank"
@@ -458,17 +439,17 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Solutions</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-group">
                     <h4>Our Solutions</h4>
                     <ul>
-                        <li><a href="products.html">Permanent Staffing</a></li>
-                        <li><a href="products.html">Temporary Staffing</a></li>
-                        <li><a href="products.html">Leadership Hiring</a></li>
-                        <li><a href="products.html">RPO</a></li>
+                        <li><a href="solutions.html">Permanent Staffing</a></li>
+                        <li><a href="solutions.html">Temporary Staffing</a></li>
+                        <li><a href="solutions.html">Leadership Hiring</a></li>
+                        <li><a href="solutions.html">RPO</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-group">
@@ -485,7 +466,7 @@
         </div>
         <div class="footer-bottom section-container">
             <div class="footer-bottom-content">
-                <p>Copyright 2025 © IDYLLIC SERVICES PVT LTD</p>
+                <p>Copyright 2026 © IDYLLIC SERVICES PVT LTD</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -494,7 +475,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
