@@ -1603,6 +1603,15 @@ a.contact-item-value:hover {
     padding-right: 20px;
 }
 
+.footer-about h4 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
 .footer-logo {
     margin-bottom: 16px;
 }
@@ -2963,6 +2972,68 @@ a.contact-item-value:hover {
         min-height: 280px;
     }
 
+    /* Culture page mobile fixes */
+    .culture-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .culture-intro-visual {
+        position: relative;
+        min-height: 260px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .culture-visual-card {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: calc(50% - 12px);
+        animation: none;
+    }
+
+    .culture-vc-3 {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .cvc-number {
+        font-size: 1.6rem;
+    }
+
+    /* Vision & Mission mobile */
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vm-card {
+        padding: 30px 24px;
+    }
+
+    /* Legal pages mobile fixes */
+    .legal-content {
+        padding: 20px 0 60px;
+    }
+
+    .legal-body h2 {
+        font-size: 1.1rem;
+        margin-top: 24px;
+    }
+
+    .legal-contact-info {
+        padding: 18px;
+    }
+
+    /* DEI items */
+    .dei-item {
+        padding: 12px 16px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -2987,7 +3058,7 @@ a.contact-item-value:hover {
     }
 
     .subpage-header {
-        padding: 120px 0 40px;
+        padding: 100px 0 30px;
     }
 
     .chatbot-container {
@@ -3021,5 +3092,38 @@ a.contact-item-value:hover {
 
     .btn-lg {
         padding: 14px 28px;
+    }
+
+    .culture-visual-card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .culture-intro-title {
+        font-size: 1.5rem;
+    }
+
+    .value-card {
+        padding: 24px 18px;
+    }
+
+    .vm-card {
+        padding: 24px 18px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 220px;
+    }
+
+    .legal-body {
+        padding: 0 4px;
+    }
+
+    .contact-map {
+        padding: 50px 0 40px;
+    }
+
+    .subpage-header h1 {
+        font-size: 1.8rem;
     }
 }
